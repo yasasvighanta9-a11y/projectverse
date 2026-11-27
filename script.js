@@ -113,5 +113,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-<script src="script.js"></script>
-<script type="module" src="auth.js"></script>

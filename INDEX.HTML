@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f7f4">
+
+    <title>ProjectVerse | Build Your Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <span class="brand-mark">✦</span>
+        <span>ProjectVerse</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#explore">Explore</a>
+        <a href="#teammates">Teammates</a>
+        <a href="#mentor">AI Mentor</a>
+        <a href="#dashboard">Dashboard</a>
+    </nav>
+
+    <div class="user-auth-area">
+        <span id="currentUserName">Guest</span>
+
+        <a href="login.html" id="loginLink" class="primary">
+            Login
+        </a>
+
+        <button id="logoutBtn" hidden>
+            Logout
+        </button>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HOME -->
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+
+            <span class="pill">YOUR CREATIVE UNIVERSE</span>
+
+            <h1>
+                Ideas become
+                <span>extraordinary</span>
+                when you build them.
+            </h1>
+
+            <p>
+                Discover projects, meet talented student builders,
+                explore new technologies and turn your imagination
+                into something real.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#explore" class="primary">
+                    Explore Projects →
+                </a>
+
+                <a href="signup.html" class="secondary">
+                    Join ProjectVerse
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="hero-center">
+                <span>✦</span>
+                <strong>BUILD</strong>
+                <small>YOUR UNIVERSE</small>
+            </div>
+
+            <div class="floating-card card-one">
+                💡 New Ideas
+            </div>
+
+            <div class="floating-card card-two">
+                👥 Teamwork
+            </div>
+
+            <div class="floating-card card-three">
+                🚀 Innovation
+            </div>
+        </div>
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats-section">
+        <div class="stat-card">
+            <h2>Discover</h2>
+            <p>Creative student projects</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>Connect</h2>
+            <p>Find project teammates</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>Build</h2>
+            <p>Turn ideas into reality</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>Grow</h2>
+            <p>Develop your skills</p>
+        </div>
+    </section>
+
+
+    <!-- EXPLORE -->
+
+    <section id="explore" class="section">
+        <div class="section-heading">
+            <div>
+                <span class="pill">DISCOVER SOMETHING NEW</span>
+                <h2>Explore Projects</h2>
+                <p>Find inspiration from creative ideas.</p>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input
+                type="search"
+                id="projectSearch"
+                placeholder="Search projects..."
+            >
+
+            <select id="projectCategory">
+                <option value="all">All Categories</option>
+                <option value="Web">Web Development</option>
+                <option value="AI">Artificial Intelligence</option>
+                <option value="Productivity">Productivity</option>
+                <option value="Community">Community</option>
+            </select>
+        </div>
+
+        <div id="projectGrid" class="project-grid">
+
+            <article class="project-card">
+                <span class="pill">WEB DEVELOPMENT</span>
+                <h3>Campus Event Hub</h3>
+                <p>Discover and explore campus events.</p>
+                <span>HTML · CSS · JavaScript</span>
+            </article>
+
+            <article class="project-card">
+                <span class="pill">PRODUCTIVITY</span>
+                <h3>StudyFlow</h3>
+                <p>A simple student planning experience.</p>
+                <span>HTML · CSS · JavaScript</span>
+            </article>
+
+            <article class="project-card">
+                <span class="pill">SOCIAL IMPACT</span>
+                <h3>EcoTrack</h3>
+                <p>Explore sustainable everyday habits.</p>
+                <span>JavaScript · Design</span>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- TEAMMATES -->
+
+    <section id="teammates" class="section alternate">
+        <div class="section-heading">
+            <div>
+                <span class="pill">BUILD TOGETHER</span>
+                <h2>Find Your Teammates</h2>
+                <p>
+                    Great projects begin with great collaboration.
+                </p>
+            </div>
+        </div>
+
+        <div class="team-search">
+            <input
+                type="search"
+                id="teamSearch"
+                placeholder="Search by name or skill..."
+            >
+
+            <select id="teamBranch">
+                <option value="all">All Branches</option>
+                <option value="CSD">CSD</option>
+                <option value="CSE">CSE</option>
+                <option value="AIML">AIML</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+            </select>
+        </div>
+
+        <div id="teammateGrid" class="project-grid">
+            <article class="project-card">
+                <h3>Find a Frontend Developer</h3>
+                <p>Connect with students interested in frontend development.</p>
+            </article>
+
+            <article class="project-card">
+                <h3>Find an AI Developer</h3>
+                <p>Collaborate with students exploring artificial intelligence.</p>
+            </article>
+
+            <article class="project-card">
+                <h3>Find a Designer</h3>
+                <p>Work together on beautiful user experiences.</p>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- AI MENTOR -->
+
+    <section id="mentor" class="section">
+        <div class="mentor-card">
+            <span class="pill">YOUR PROJECT COMPANION</span>
+
+            <h2>Meet Your AI Mentor ✦</h2>
+
+            <p>
+                Get project suggestions, learning roadmaps,
+                feature ideas and guidance for your next build.
+            </p>
+
+            <textarea
+                id="mentorQuestion"
+                placeholder="Example: Suggest a unique beginner-friendly AI project..."
+                rows="4"
+            ></textarea>
+
+            <button class="primary" id="mentorButton">
+                Get Project Ideas →
+            </button>
+
+            <div id="mentorResponse" class="mentor-response">
+                Your suggestions will appear here.
+            </div>
+
+            <small>
+                This is a local demo mentor, not a live AI service yet.
+            </small>
+        </div>
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="section alternate">
+        <div class="section-heading">
+            <div>
+                <span class="pill">YOUR SPACE</span>
+                <h2>Student Dashboard</h2>
+                <p>Your ProjectVerse activity.</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="dashboard-avatar">✦</div>
+
+            <div>
+                <h3 id="dashboardName">Welcome, Student!</h3>
+                <p id="dashboardEmail">
+                    Sign in to access your student profile.
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <h2 id="dashboardBranch">—</h2>
+                <p>Branch</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="dashboardYear">—</h2>
+                <p>Academic Year</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="dashboardSkills">0</h2>
+                <p>Skills Added</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="logo">
+        <span class="brand-mark">✦</span>
+        ProjectVerse
+    </div>
+
+    <p>
+        Built for dreamers, creators and student innovators.
+    </p>
+
+    <small>© 2026 ProjectVerse. Build your universe.</small>
+</footer>
+
+
+<div id="toast"></div>
+
+
+<!-- Keep your original V2 website script -->
+<script src="script.js"></script>
+
+<!-- Firebase authentication -->
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>

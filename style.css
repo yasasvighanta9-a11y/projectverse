@@ -416,3 +416,96 @@ button::after,
 .btn::after {
     animation: none !important;
 }
+
+.projectverse-home {
+    background: #eff2e9;
+    color: #172e25;
+    font-family: Georgia, serif;
+}
+
+.home-header,
+.home-main {
+    width: min(68rem, calc(100% - 3rem));
+    margin-inline: auto;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-block: 1.5rem;
+    border-bottom: 1px solid #b4c2b4;
+}
+
+.home-header a {
+    color: inherit;
+}
+
+.home-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home-intro {
+    padding-block: clamp(3rem, 10vw, 7rem);
+}
+
+.home-label {
+    font: bold 0.8rem/1.5 sans-serif;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.home-intro h1 {
+    max-width: 13ch;
+    margin-block: 1rem;
+    font-size: clamp(2.65rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.home-intro p:not(.home-label) {
+    max-width: 34rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.home-cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.8rem 1.15rem;
+    border-radius: 0.35rem;
+    background: #234436;
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-cta:hover {
+    background: #365d4b;
+}
+
+.home-profile {
+    max-width: 32rem;
+    padding-block: 1rem;
+    border-top: 1px solid #b4c2b4;
+    overflow-wrap: anywhere;
+}
+
+.home-profile dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+}
+
+.home-profile dd {
+    margin: 0;
+}

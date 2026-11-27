@@ -183,21 +183,17 @@ function getFriendlyError(code) {
 
 onAuthStateChanged(auth, async (user) => {
 
-    if (!user) {
-        const currentPage = window.location.pathname.toLowerCase();
-        const isAuthPage =
-            currentPage.endsWith("/login.html") ||
-            currentPage.endsWith("/signup.html");
+    const dashboard = document.getElementById("dashboardProfile");
+    if (!dashboard) return;
 
-        if (!isAuthPage) {
-            window.location.href = "login.html";
-        }
-        return;
-    }
+    dashboard.hidden = true;
+    if (!user) return;
 
     try {
         const profileRef = doc(db, "users", user.uid);
         const profileSnapshot = await getDoc(profileRef);
+
+        if (auth.currentUser?.uid !== user.uid) return;
 
         if (!profileSnapshot.exists()) {
             toast("Student profile not found.");
@@ -219,6 +215,7 @@ onAuthStateChanged(auth, async (user) => {
         if (year) year.textContent = profile.year;
         if (skills) skills.textContent = (profile.skills || []).length;
         if (currentName) currentName.textContent = profile.name;
+        dashboard.hidden = false;
 
     } catch (error) {
         console.error("Profile loading error:", error);

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ProjectVerse | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <div class="auth-brand">
+            <div class="brand-mark">✦</div>
+
+            <h1>ProjectVerse</h1>
+
+            <p>
+                Your ideas deserve a universe.
+            </p>
+        </div>
+
+
+        <div class="auth-card">
+
+            <span class="pill">
+                WELCOME BACK
+            </span>
+
+            <h2>Login to ProjectVerse</h2>
+
+            <p class="auth-subtitle">
+                Continue building your next project.
+            </p>
+
+
+            <form id="loginForm">
+
+                <label>Email</label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+
+                <label>Password</label>
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="••••••••"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary full">
+
+                    Login →
+
+                </button>
+
+            </form>
+
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+
+            <button
+                class="google-btn"
+                onclick="demoLogin()">
+
+                ✦ Continue with Demo Account
+
+            </button>
+
+
+            <p class="auth-switch">
+
+                Don't have an account?
+
+                <a href="signup.html">
+                    Create one
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back-home">
+
+            ← Back to ProjectVerse
+
+        </a>
+
+    </div>
+
+
+    <div id="toast"></div>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>

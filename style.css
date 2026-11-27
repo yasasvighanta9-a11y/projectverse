@@ -1,0 +1,418 @@
+/* =====================================================
+   AUTHENTICATION PAGES
+   ==================================================== */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #dcece5,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            #e4dded,
+            transparent 30%
+        ),
+        var(--bg);
+}
+
+
+.auth-container {
+    width: min(450px, 100%);
+}
+
+
+.auth-brand {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.auth-brand .brand-mark {
+    margin: 0 auto 15px;
+}
+
+
+.auth-brand h1 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+
+.auth-brand p {
+    color: var(--muted);
+
+    margin-top: 7px;
+}
+
+
+.auth-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 30px 80px rgba(42,70,60,.12);
+}
+
+
+.auth-card h2 {
+    font-size: 28px;
+
+    margin: 15px 0 7px;
+}
+
+
+.auth-subtitle {
+    color: var(--muted);
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+
+.auth-card label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin: 15px 0 7px;
+}
+
+
+.auth-card input,
+.auth-card select {
+    width: 100%;
+}
+
+
+.auth-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 22px 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+.google-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: var(--surface2);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    font-weight: 700;
+}
+
+
+.google-btn:hover {
+    background: #e2ece7;
+}
+
+
+.auth-switch {
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 20px;
+}
+
+
+.auth-switch a {
+    color: var(--primary);
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.back-home {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+
+.back-home:hover {
+    color: var(--primary);
+}/* PROJECTVERSE V3 DASHBOARD */
+
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.dashboard-avatar {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: var(--surface2);
+    color: var(--primary);
+    font-size: 28px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.user-auth-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-auth-area button {
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--surface2);
+    color: var(--text);
+}
+
+.user-auth-area button[hidden],
+.user-auth-area a[hidden] {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}/* FIX UNWANTED WEBSITE MOVEMENT */
+
+html {
+    scroll-behavior: auto !important;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    animation: none !important;
+}
+
+* {
+    transition-property: color, background-color, border-color !important;
+}
+
+.hero,
+.hero-content,
+.hero-visual,
+.orbit,
+.floating-card {
+    animation: none !important;
+    transform: none;
+}/* =================================
+   PROJECTVERSE - STABILITY FIX
+================================= */
+
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: clip;
+    scroll-behavior: auto;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: clip;
+    position: relative;
+}
+
+/* Prevent elements from expanding the page */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Keep main sections within screen */
+
+header,
+main,
+section,
+footer {
+    max-width: 100%;
+}
+
+/* Prevent oversized content */
+
+img,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+}
+
+/* Prevent unwanted horizontal movement */
+
+.hero,
+.hero-content,
+.hero-visual,
+.section,
+.stats-section,
+.project-grid,
+.dashboard-grid {
+    max-width: 100%;
+}
+
+/* Disable floating animations temporarily */
+
+.orbit,
+.floating-card,
+.hero-center {
+    animation: none !important;
+}
+
+/* Prevent unwanted transitions */
+
+body,
+header,
+main,
+section,
+footer {
+    transition: none !important;
+}/* =====================================
+   PROJECTVERSE - CLEAN STABILITY RULES
+===================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+main,
+header,
+footer,
+section {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.project-grid,
+.dashboard-grid {
+    min-width: 0;
+}
+
+@media (max-width: 700px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}/* PROJECTVERSE BUTTON STABILITY FIX */
+
+button,
+.btn,
+button:hover,
+.btn:hover,
+button:focus,
+.btn:focus,
+button:active,
+.btn:active {
+    animation: none !important;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease !important;
+    transform: none !important;
+}
+
+button::before,
+button::after,
+.btn::before,
+.btn::after {
+    animation: none !important;
+}
